@@ -1,0 +1,91 @@
+@use '../helpers' as *;
+
+.play-and-win {
+	padding-block: rem(15) rem(70);
+	background-color: var(--color-dark);
+	&__container {
+		display: grid;
+
+		grid-template-rows: repeat(2, auto);
+
+		@include laptop-above {
+			grid-template-columns: rem(505) 1fr;
+			grid-template-areas:
+				'text-block text-block'
+				'form image-block';
+		}
+		@include laptop {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'text-block image-block'
+				'form image-block';
+		}
+		@include tablet {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'image-block'
+				'text-block'
+				'form';
+		}
+	}
+	&__text-block {
+		grid-area: text-block;
+		max-width: rem(952);
+		margin-block-end: rem(25);
+	}
+	&__title {
+		--size-icon: #{rem(132)};
+		position: relative;
+		display: flex;
+		align-items: center;
+		column-gap: rem(32);
+		margin-bottom: rem(25);
+		span {
+			color: var(--color-light);
+			position: absolute;
+			padding-left: calc(var(--size-icon) + rem(32));
+			@include mobile {
+				padding-left: 0;
+			}
+		}
+		&::before {
+			content: '';
+			background: url('../../images/play-and-win/icon.svg');
+			height: var(--size-icon);
+			aspect-ratio: 1;
+			@include mobile {
+				display: none;
+			}
+		}
+	}
+	&__text {
+		color: var(--color-light);
+	}
+	&__form {
+		grid-area: form;
+	}
+	&__image-block {
+		grid-area: image-block;
+		position: relative;
+		@include tablet {
+			display: flex;
+		}
+	}
+	&__image {
+		@include laptop-above {
+			position: absolute;
+		}
+		@include tablet {
+		}
+		&:first-child {
+			z-index: 2;
+		}
+		&:last-child {
+			right: 0;
+		}
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}

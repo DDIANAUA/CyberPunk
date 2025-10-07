@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+
+.button {
+	height: rem(78);
+	padding-inline: rem(50);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: rem(24);
+	text-decoration: none;
+	background-color: var(--color-dark);
+	color: var(--color-accent);
+	font-weight: 700;
+	border: none;
+	@include mobile {
+		font-size: rem(20);
+	}
+	@include hovera {
+		background-color: #1b1b1b;
+		color: #fffb00;
+	}
+
+	&--yellow {
+		background-color: var(--color-accent);
+		color: var(--color-dark);
+		@include hovera {
+			background-color: #fffb00;
+			color: #1b1b1b;
+		}
+	}
+}

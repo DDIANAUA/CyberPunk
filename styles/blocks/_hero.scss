@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.hero {
+	height: 100svh;
+	background-image: url('./../../images/hero/0.avif');
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: var(--transition);
+
+	&__container {
+		height: 100%;
+		position: relative;
+	}
+	&__banner {
+		position: absolute;
+		background-color: var(--color-accent);
+		clip-path: var(--clip-path);
+		right: var(--container-padding-x);
+		bottom: 0;
+		width: rem(574);
+		padding: rem(37);
+
+		@include mobile {
+			padding: rem(30) rem(12);
+			width: 100%;
+			right: 0;
+			text-align: center;
+		}
+		&-text {
+			margin-bottom: rem(25);
+		}
+	}
+	&__button {
+	}
+}

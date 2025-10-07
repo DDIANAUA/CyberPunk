@@ -1,0 +1,5 @@
+@use '../helpers' as *;
+.accent-link {
+	font-weight: 700;
+	color: var(--color-blue);
+}

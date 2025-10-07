@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.soc1als {
+	&__list {
+		display: flex;
+		column-gap: rem(40);
+	}
+	&__item {
+	}
+	&__link {
+		display: flex;
+		width: rem(30);
+		svg * {
+			width: 100%;
+			fill: var(--color-dark);
+		}
+		@include hovera {
+			svg * {
+				fill: var(--color-grey);
+			}
+		}
+
+		@include mobile-s {
+			width: rem(25);
+		}
+	}
+}

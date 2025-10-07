@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.main {
+	&__hero {
+		padding-top: rem(122);
+		@include mobile {
+			padding-top: rem(168);
+		}
+		@include mobile-s {
+			padding-top: rem(130);
+		}
+	}
+	&__night-city {
+	}
+	&__play-and-win {
+	}
+}

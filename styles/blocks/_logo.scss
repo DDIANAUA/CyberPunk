@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.logo {
+	display: inline-block;
+	max-width: rem(296);
+	img {
+		width: 100%;
+		object-fit: contain;
+	}
+	@include mobile-s {
+		width: rem(200);
+	}
+}

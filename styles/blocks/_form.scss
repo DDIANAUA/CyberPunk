@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(35);
+	&__input {
+		background-color: transparent;
+		border-top: none;
+		border-inline: none;
+		border-bottom: rem(1) solid var(--color-grey);
+		padding-block: rem(13);
+		color: var(--color-light);
+		&:focus-visible {
+			outline: none;
+			border-bottom: 1px solid var(--color-light);
+		}
+		&--checkbox {
+			appearance: none;
+			position: relative;
+			width: rem(14);
+			height: rem(14);
+			border: 1px solid var(--color-grey);
+			padding-block: 0;
+			&:checked {
+				&::after {
+					content: '';
+					position: absolute;
+					left: rem(5);
+					top: rem(2);
+					width: rem(3);
+					height: rem(8);
+					border: solid var(--color-accent); /* Чорна галочка */
+					border-width: 0 rem(1) rem(1) 0;
+					transform: rotate(45deg);
+				}
+			}
+		}
+		&--email {
+		}
+		&--file {
+			border-bottom: none;
+			display: none;
+		}
+		&--text {
+		}
+		&-file-text {
+			text-decoration: underline;
+			color: var(--color-light);
+		}
+		&--email::placeholder,
+		&--text::placeholder {
+			color: var(--color-light);
+		}
+	}
+	&__file-drop-area {
+		border: rem(1) dashed var(--color-grey);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 150px; /* Висота зони */
+		padding: rem(20);
+		cursor: pointer;
+		transition: border-color 0.3s;
+		grid-row: rem(7);
+		span {
+			display: block;
+		}
+	}
+	&__checkbox-text {
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+	}
+	&__button {
+		align-self: flex-start;
+	}
+	&__checkbox-text {
+		label {
+			font-size: rem(12);
+		}
+	}
+}

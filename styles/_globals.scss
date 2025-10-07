@@ -1,0 +1,43 @@
+@use 'helpers' as *;
+
+body {
+	font-size: rem(18);
+
+	font-family: var(--font-family-base);
+	color: var(--color-grey);
+
+	@include mobile {
+		font-size: rem(16);
+	}
+}
+.wrapper {
+	min-height: 100svh;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	flex-grow: 1;
+}
+
+h2,
+.h2 {
+	font-family: var(--font-family-accent);
+	font-size: rem(62);
+	line-height: 1;
+	letter-spacing: rem(1);
+	color: var(--color-dark);
+
+	@include mobile {
+		font-size: rem(30);
+	}
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+	transition-duration: var(--transition-duration);
+}

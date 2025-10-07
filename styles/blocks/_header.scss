@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+
+.header {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: rem(122);
+
+	@include mobile {
+		height: rem(168);
+	}
+	@include mobile-s {
+		height: rem(125);
+	}
+	&__container {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: space-between;
+
+		@include mobile {
+			flex-direction: column;
+			row-gap: rem(10);
+			justify-content: center;
+		}
+	}
+	&__logo {
+	}
+	&__soc1als {
+	}
+}

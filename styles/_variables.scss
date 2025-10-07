@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+:root {
+	--color-blue: #52bedc;
+	--color-dark: #000000;
+	--color-yellow: #fbf503;
+	--color-light: #ffffff;
+	--color-accent: #f8f200;
+	--color-grey: #777777;
+
+	--font-family-base: 'Roboto', sans-serif;
+	--font-family-accent: 'Archangelsk', sans-serif;
+
+	--container-width: #{rem(1280)};
+	--container-padding-x: #{rem(36)};
+
+	--transition-duration: 0.2s;
+	--transition: all var(--transition-duration) ease;
+
+	--clip-path: polygon(
+		#{rem(48)} 0,
+		100% 0,
+		100% calc(100% - #{rem(48)}),
+		calc(100% - #{rem(48)}) 100%,
+		0 100%,
+		0 #{rem(48)}
+	);
+
+	@include mobile {
+		--container-padding-x: #{rem(12)};
+	}
+}

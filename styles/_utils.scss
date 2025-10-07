@@ -1,0 +1,22 @@
+@use 'helpers' as *;
+
+[class*='__container'] {
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+	@include visually-hidden;
+}
+
+.divider {
+	width: 100%;
+	height: rem(70);
+	background-image: url('../images/divider/divider-border.avif');
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	&--reverse {
+		transform: scaleY(-1);
+	}
+}
