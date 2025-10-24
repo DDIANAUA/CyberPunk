@@ -1,0 +1,65 @@
+@use '../helpers' as *;
+.hp {
+	background-color: var(--color-accent);
+	padding-block: rem(70);
+	&__container {
+		display: flex;
+		column-gap: rem(32);
+		@include tablet {
+			flex-direction: column;
+		}
+	}
+	&__image-side {
+		&-main-photo {
+			width: rem(624);
+			margin-bottom: rem(26);
+			@include laptop {
+				width: rem(460);
+			}
+			@include tablet {
+				width: 100%;
+			}
+			img {
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+		&-bottom {
+			display: flex;
+			align-items: center;
+			column-gap: rem(30);
+			justify-content: center;
+			@include laptop {
+				flex-direction: column;
+				row-gap: rem(25);
+			}
+			@include tablet {
+				flex-direction: row;
+			}
+		}
+		&-bottom-image {
+		}
+	}
+	&__text-side {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+		&-title {
+		}
+		&-paragraphs {
+			p {
+				font-size: rem(18);
+				color: var(--color-dark);
+				line-height: 1.88;
+			}
+		}
+		&-list {
+		}
+		&-button {
+			align-self: flex-start;
+			&:not(:first-child) {
+				margin-top: rem(15);
+			}
+		}
+	}
+}

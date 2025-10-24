@@ -208,6 +208,7 @@ svg * {
   --font-family-accent: "Archangelsk", sans-serif;
   --container-width: 80rem;
   --container-padding-x: 2.25rem;
+  --divider-height: 4.375rem;
   --transition-duration: 0.2s;
   --transition: all var(--transition-duration) ease;
   --clip-path: polygon(
@@ -246,10 +247,15 @@ svg * {
 
 .divider {
   width: 100%;
-  height: 4.375rem;
-  background-image: url("../images/divider/divider-border.avif");
+  height: var(--divider-height);
   background-repeat: repeat-x;
   background-size: auto 100%;
+}
+.divider--black {
+  background-image: url("../images/divider/divider-border.avif");
+}
+.divider--yellow {
+  background-image: url("../images/divider/divider-border-yellow.avif");
 }
 .divider--reverse {
   transform: scaleY(-1);
@@ -684,6 +690,87 @@ svg * {
 .play-and-win__image img {
   width: 100%;
   object-fit: contain;
+}
+
+.hp {
+  background-color: var(--color-accent);
+  padding-block: 4.375rem;
+}
+.hp__container {
+  display: flex;
+  column-gap: 2rem;
+}
+@media (width <= 64.06125rem) {
+  .hp__container {
+    flex-direction: column;
+  }
+}
+.hp__image-side-main-photo {
+  width: 39rem;
+  margin-bottom: 1.625rem;
+}
+@media (width <= 90.06125rem) {
+  .hp__image-side-main-photo {
+    width: 28.75rem;
+  }
+}
+@media (width <= 64.06125rem) {
+  .hp__image-side-main-photo {
+    width: 100%;
+  }
+}
+.hp__image-side-main-photo img {
+  width: 100%;
+  object-fit: contain;
+}
+.hp__image-side-bottom {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+  justify-content: center;
+}
+@media (width <= 90.06125rem) {
+  .hp__image-side-bottom {
+    flex-direction: column;
+    row-gap: 1.5625rem;
+  }
+}
+@media (width <= 64.06125rem) {
+  .hp__image-side-bottom {
+    flex-direction: row;
+  }
+}
+.hp__text-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5625rem;
+}
+.hp__text-side-paragraphs p {
+  font-size: 1.125rem;
+  color: var(--color-dark);
+  line-height: 1.88;
+}
+.hp__text-side-button {
+  align-self: flex-start;
+}
+.hp__text-side-button:not(:first-child) {
+  margin-top: 0.9375rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9375rem;
+}
+.list__item {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+  color: black;
+}
+.list__item svg {
+  fill: black;
 }
 
 /*# sourceMappingURL=main.css.map */

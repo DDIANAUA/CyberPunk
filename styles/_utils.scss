@@ -12,10 +12,15 @@
 
 .divider {
 	width: 100%;
-	height: rem(70);
-	background-image: url('../images/divider/divider-border.avif');
+	height: var(--divider-height);
 	background-repeat: repeat-x;
 	background-size: auto 100%;
+	&--black {
+		background-image: url('../images/divider/divider-border.avif');
+	}
+	&--yellow {
+		background-image: url('../images/divider/divider-border-yellow.avif');
+	}
 	&--reverse {
 		transform: scaleY(-1);
 	}
