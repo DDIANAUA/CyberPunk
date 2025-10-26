@@ -1,0 +1,21 @@
+@use '../helpers' as *;
+.platforms {
+	&__title {
+		margin-bottom: rem(25);
+	}
+	&__list {
+		display: inline-grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+		gap: rem(48) rem(79);
+		@include mobile {
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(41) rem(56);
+		}
+	}
+	&__item {
+		svg {
+			fill: var(--color-accent);
+		}
+	}
+}

@@ -13,6 +13,14 @@
 			fill: black;
 		}
 	}
-	&__link {
+	&--yellow {
+		.list__item {
+			svg {
+				fill: var(--color-accent);
+			}
+			span {
+				color: var(--color-light);
+			}
+		}
 	}
 }

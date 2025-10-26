@@ -1,0 +1,62 @@
+@use '../helpers' as *;
+.footer {
+	&__container {
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-block: rem(13);
+		@include tablet {
+			padding-block: 0;
+			flex-direction: column;
+			& > * {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+	&__logos {
+		display: flex;
+		column-gap: rem(32);
+		@include tablet {
+			padding-block: rem(40) rem(25);
+			row-gap: rem(25);
+		}
+	}
+	&__cyberpunk-logo {
+	}
+	&__cd-project-logo {
+	}
+	&__legal {
+		display: flex;
+		column-gap: rem(32);
+		@include tablet {
+			text-align: center;
+			background-color: #e6e6e6;
+			width: 100vw;
+			padding-block: rem(25);
+			row-gap: rem(15);
+		}
+		&-link {
+			font-size: rem(18);
+			color: var(--color-dark);
+			@include mobile {
+				font-size: rem(16);
+			}
+		}
+	}
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--color-dark);
+		min-height: rem(40);
+		padding-block: rem(10);
+	}
+	&__copyright {
+		font-size: rem(12);
+	}
+}
+.logo {
+}
